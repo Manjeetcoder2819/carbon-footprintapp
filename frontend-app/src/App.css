@@ -1,0 +1,248 @@
+/* General Styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #dbd6f5;
+  color: hsl(0, 0%, 4%);
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.App-header {
+  background-color: #6b7783;
+  color: white;
+  padding: 20px;
+  display: flex;
+  justify-content: center; /* Center all content in the header */
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+h1 {
+  text-align: center;   /* Center the text horizontally */
+  white-space: nowrap;  /* Prevent text from wrapping to the next line */
+  margin: 0;            /* Optional: Remove default margins */
+  font-size: 2rem;      /* Adjust the font size as needed */
+  line-height: 1.2;     /* Optional: Adjust the line height for better spacing */
+  flex-grow: 1;         /* Allow the header text to take available space */
+}
+
+.header-left img {
+  width: 50px;
+  height: auto;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+}
+
+.header-right a {
+  margin-left: 10px;
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.header-right a:hover {
+  text-decoration: underline;
+}
+
+.header-right button {
+  margin-left: 10px;
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.header-right button:hover {
+  background-color: #45a049;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.content {
+  max-width: 1200px;
+  width: 100%;
+}
+
+.sidebar {
+  width: 300px;
+  background-color: #f9f9f9;
+  padding: 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  display: none; /* Hidden by default */
+}
+
+.content.shifted {
+  margin-left: 300px; /* Shift content when sidebar is visible */
+}
+
+.App-footer {
+  padding: 10px;
+  background-color: #f1f1f1;
+  font-size: 14px;
+  color: #666;
+  text-align: center;
+}
+
+.form-container {
+  position: relative;
+}
+
+.close-btn {
+  position: absolute;
+  top: -40px;
+  left: 140px;
+  font-size: 20px;
+  color: #333;
+  background: none;
+  border: none;
+  cursor: pointer;
+  border-radius: 20px;
+  background-color:aquamarine;
+ 
+  
+}
+
+.close-btn:hover {
+  color: red;
+  
+}
+
+/* Mobile Styles (up to 600px) */
+@media (max-width: 600px) {
+  .App-header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .header-left h1 {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .header-left img {
+    width: 40px;
+    margin-bottom: 10px;
+  }
+
+  .header-right a {
+    font-size: 0.9rem;
+    margin-top: 10px;
+  }
+
+  .header-right button {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .sidebar {
+    display: block; /* Show sidebar on mobile */
+    position: relative;
+    width: 100%;
+    top: auto;
+    height: auto;
+    box-shadow: none;
+  }
+
+  .content {
+    margin-left: 0;
+    width: 100%;
+    padding: 10px;
+  }
+
+  .App-footer {
+    font-size: 12px;
+  }
+}
+
+/* Laptop Styles (601px to 1024px) */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .App-header {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .header-left h1 {
+    font-size: 22px;
+  }
+
+  .header-left img {
+    width: 50px;
+    margin-right: 10px;
+  }
+
+  .header-right a {
+    font-size: 1rem;
+  }
+
+  .header-right button {
+    margin-left: 10px;
+  }
+
+  .sidebar {
+    width: 250px;
+    display: block;
+  }
+
+  .content {
+    margin-left: 250px;
+    padding: 20px;
+  }
+
+  .App-footer {
+    font-size: 13px;
+  }
+}
+
+/* Desktop (TV/Large Screen) Styles (1025px and up) */
+@media (min-width: 1025px) {
+  .App-header {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .header-left h1 {
+    font-size: 28px;
+  }
+
+  .header-left img {
+    width: 60px;
+  }
+
+  .header-right button {
+    padding: 12px 25px;
+    margin-left: 20px;
+  }
+
+  .sidebar {
+    width: 300px;
+    display: block;
+  }
+
+  .content {
+    margin-left: 300px;
+    padding: 30px;
+  }
+
+  .App-footer {
+    font-size: 16px;
+  }
+}

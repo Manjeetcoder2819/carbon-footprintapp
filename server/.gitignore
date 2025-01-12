@@ -1,0 +1,76 @@
+# Dependency directories
+node_modules/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+lerna-debug.log*
+yarn-error.log*
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Build files and directories
+dist/
+build/
+tmp/
+out/
+.cache/
+
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# IDEs and editors
+.idea/
+.vscode/
+*.swp
+*.swo
+*.sublime-project
+*.sublime-workspace
+
+# Debugger
+debug.log
+*.pid
+*.seed
+*.pid.lock
+
+# Coverage reports
+coverage/
+*.lcov
+
+# Package files
+*.tgz
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Docker
+.dockerignore
+docker-compose.override.yml
+
+# CI/CD
+.husky/
+.nyc_output/
+
+# Miscellaneous
+*.bak
+*.tmp
+*.log
+*.log.*
+*.patch
+
+ # TypeScript (if applicable)
+ *.tsbuildinfo
+
+ # Serverless Framework
+ .serverless/
+
+
+vercel.json
+.vercel

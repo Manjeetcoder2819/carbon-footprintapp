@@ -1,0 +1,163 @@
+/* General Container Style */
+.container {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  text-align: center;
+  color: #333;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+/* Input Fields */
+input[type="text"],
+input[type="email"],
+select {
+  width: 100%;
+  max-width: 800px; /* Optional, adjust max width as needed */
+  padding: 10px;
+  margin: 10px 0;
+  font-size: 16px;
+  border: 1px solid #f0cfcf;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+/* Error Message */
+.error {
+  color: #e74c3c;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+/* Button */
+button {
+  width: 100%;
+  max-width: 800px;
+  padding: 12px;
+  background-color: #007bff;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Results Section */
+.results {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.results p {
+  font-size: 16px;
+  color: #333;
+}
+
+.results .rating, .results .semicircle {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+/* Emission Rating Styling */
+.rating {
+  font-size: 18px;
+  color: #27ae60;
+  font-weight: bold;
+}
+
+/* Semicircle Bar Styling */
+.semicircle-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.semicircle-bar {
+  position: relative;
+  width: 300px;
+  height: 150px;
+  background: transparent;
+  border-top-left-radius: 150px;
+  border-top-right-radius: 150px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  border: 2px solid #ccc;
+}
+
+.pointer {
+  position: absolute;
+  width: 4px;
+  height: 90%;
+  background: black;
+  bottom: 0;
+  left: 50%;
+  transform-origin: bottom;
+  transition: transform 0.5s ease-in-out;
+  z-index: 2;
+}
+
+/* Scale Styling */
+.scale-number {
+  position: absolute;
+  transform-origin: center;
+  font-size: 14px;
+  color: #333;
+  text-align: center;
+  pointer-events: none;
+}
+
+.scale {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  border-top-left-radius: 150px;
+  border-top-right-radius: 150px;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 600px) {
+  .container {
+    padding: 15px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  select,
+  button {
+    max-width: 100%;
+  }
+
+  .results {
+    padding: 15px;
+  }
+}

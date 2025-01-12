@@ -1,0 +1,26 @@
+# Force text files to use LF line endings
+* text=auto eol=lf
+
+# Explicitly define line endings for specific file types
+*.js    text eol=lf
+*.jsx   text eol=lf
+*.ts    text eol=lf
+*.tsx   text eol=lf
+*.css   text eol=lf
+*.html  text eol=lf
+*.json  text eol=lf
+*.md    text eol=lf
+
+# Binary files - do not modify line endings
+*.png   binary
+*.jpg   binary
+*.gif   binary
+*.ico   binary
+*.pdf   binary
+*.exe   binary
+*.zip   binary
+
+# Exclude specific files from line-ending normalization
+# For example, Windows batch files may require CRLF endings
+*.bat   text eol=crlf
+*.cmd   text eol=crlf
